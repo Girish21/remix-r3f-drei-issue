@@ -1,3 +1,4 @@
+import { ClientOnly } from 'remix-utils'
 import { Canvas } from '@react-three/fiber';
 import ProjectText from './ProjectText';
 
@@ -12,7 +13,9 @@ export default function ProjectCanvas() {
           position: [0, 0, 10],
         }}
       >
-        <ProjectText />
+        <ClientOnly>
+          <ProjectText />
+        </ClientOnly>
       </Canvas>
     </div>
   )
